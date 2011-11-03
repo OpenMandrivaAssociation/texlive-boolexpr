@@ -1,3 +1,9 @@
+# revision 17830
+# category Package
+# catalog-ctan /macros/latex/contrib/boolexpr
+# catalog-date 2010-04-12 11:39:15 +0200
+# catalog-license lppl
+# catalog-version 3.14
 Name:		texlive-boolexpr
 Version:	3.14
 Release:	1
@@ -53,6 +59,7 @@ expandable) has the form: \switch \case{<boolean expression>}
 #- source
 %doc %{_texmfdistdir}/source/latex/boolexpr/boolexpr.dtx
 %doc %{_texmfdistdir}/source/latex/boolexpr/boolexpr.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +70,5 @@ expandable) has the form: \switch \case{<boolean expression>}
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

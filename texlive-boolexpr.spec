@@ -6,7 +6,7 @@
 # catalog-version 3.14
 Name:		texlive-boolexpr
 Version:	3.14
-Release:	6
+Release:	7
 Summary:	A boolean expression evaluator and a switch command
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/boolexpr

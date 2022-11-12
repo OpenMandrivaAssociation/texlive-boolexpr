@@ -5,9 +5,9 @@ Summary:	A boolean expression evaluator and a switch command
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/boolexpr
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.r17830.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.doc.r17830.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.source.r17830.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg

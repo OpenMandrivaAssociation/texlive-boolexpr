@@ -1,19 +1,13 @@
-# revision 17830
-# category Package
-# catalog-ctan /macros/latex/contrib/boolexpr
-# catalog-date 2010-04-12 11:39:15 +0200
-# catalog-license lppl
-# catalog-version 3.14
 Name:		texlive-boolexpr
-Version:	3.14
-Release:	12
+Version:	17830
+Release:	1
 Summary:	A boolean expression evaluator and a switch command
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/boolexpr
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.r17830.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.doc.r17830.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/boolexpr.source.r17830.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ expandable) has the form: \switch \case{<boolean expression>}
 \endswitch.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,25 +46,11 @@ expandable) has the form: \switch \case{<boolean expression>}
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.14-2
-+ Revision: 749840
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.14-1
-+ Revision: 717971
-- texlive-boolexpr
-- texlive-boolexpr
-- texlive-boolexpr
-- texlive-boolexpr
-- texlive-boolexpr
-
